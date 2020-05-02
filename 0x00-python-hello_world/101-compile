@@ -1,3 +1,5 @@
 #!//bin/bash
 
-python3 -m compileall
+echo "Compiling main.py ..."
+
+python3 -m compileall -b $PYFILE
