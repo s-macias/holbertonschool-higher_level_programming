@@ -26,3 +26,13 @@ NameError: name 'a' is not defined
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
+
+>>> add_integer(float("inf"), 0)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(float("nan"), 0)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
