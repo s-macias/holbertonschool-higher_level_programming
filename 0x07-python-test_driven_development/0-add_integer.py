@@ -17,9 +17,9 @@ def add_integer(a, b=98):
     Returns:
         int: sum of operands
     """
-    if isinstance(a, (int, float)) is False:
+    if isinstance(a, (int, float)) is False or a == float("inf") or a != a:
         raise TypeError("a must be an integer")
-    elif isinstance(b, (int, float)) is False:
+    elif isinstance(b, (int, float)) is False or b == float("inf") or b != b:
         raise TypeError("b must be an integer")
 
     return int(a) + int(b)
