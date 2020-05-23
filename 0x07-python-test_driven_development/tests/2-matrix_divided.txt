@@ -5,7 +5,6 @@
 >>> matrix_divided(matrix, 3)
 [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
 
-
 >>> matrix_divided(matrix, 0)
 Traceback (most recent call last):
 ...
@@ -22,3 +21,10 @@ TypeError: div must be a number
 Traceback (most recent call last):
 ...
 TypeError: Each row of the matrix must have the same size
+
+>>> matrix = [[3, '9'], [15, 3]]
+
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
