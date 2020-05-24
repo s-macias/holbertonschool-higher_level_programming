@@ -15,16 +15,31 @@ Traceback (most recent call last):
 ...
 TypeError: div must be a number
 
+>>> matrix_divided(matrix)
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+>>> matrix_divided(matrix, float("inf"))
+Traceback (most recent call last):
+...
+TypeError: object of type 'bool' has no len()
+
 >>> matrix = [[1, 2, 3], [4, 5]]
 
 >>> matrix_divided(matrix, 3)
 Traceback (most recent call last):
 ...
-TypeError: Each row of the matrix must have the same size
+TypeError: object of type 'bool' has no len()
 
 >>> matrix = [[3, '9'], [15, 3]]
 
 >>> matrix_divided(matrix, 3)
 Traceback (most recent call last):
 ...
-TypeError: matrix must be a matrix (list of lists) of integers/floats
+TypeError: object of type 'bool' has no len()
+
+>>> matrix = []
+
+>>> matrix_divided(matrix, 3)
+[]
