@@ -16,8 +16,8 @@ class Rectangle:
             width (int): optional, 0 by default
             height (int): optional, 0 by default
         """
-        self._height = height
-        self._width = width
+        self.__height = height
+        self.__width = width
 
 
 @property
@@ -28,7 +28,7 @@ def width(self):
     Returns:
         width (int)
     """
-    return self._width
+    return self.__width
 
 
 @width.setter
@@ -48,7 +48,7 @@ def width(self, value):
     elif value < 0:
         raise ValueError("width must be >= 0")
     else:
-        self._width = value
+        self.__width = value
 
 
 @property
@@ -58,7 +58,7 @@ def height(self):
     Returns:
         height (int)
     """
-    return self._height
+    return self.__height
 
 
 @height.setter
@@ -78,4 +78,4 @@ def height(self, value):
     elif value < 0:
         raise ValueError("height must be >= 0")
     else:
-        self._height = value
+        self.__height = value
