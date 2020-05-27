@@ -16,8 +16,8 @@ class Rectangle:
             width (int): optional, 0 by default
             height (int): optional, 0 by default
         """
-        self.height = height
         self.width = width
+        self.height = height
 
 
 @property
