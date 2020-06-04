@@ -18,4 +18,4 @@ def number_of_lines(filename=""):
             if not line:
                 break
             nb_lines += 1
-        print(nb_lines)
+        return(nb_lines)
