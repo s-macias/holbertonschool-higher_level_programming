@@ -10,8 +10,9 @@ def read_lines(filename="", nb_lines=0):
         nb_lines: number of lines
     """
     with open(filename, encoding="utf-8") as myFile:
-        f_len = myFile.readlines()
+        nb_lines = myFile.readlines()
         if nb_lines <= 0 | nb_lines >= len(f_len):
             print(file.read(), end="")
         else:
-            print(myFile.readlines(), end="")
+            for line in MyFile:
+                print(line, end="")
