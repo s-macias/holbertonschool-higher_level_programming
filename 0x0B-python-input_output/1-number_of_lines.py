@@ -12,8 +12,8 @@ def number_of_lines(filename=""):
         number of lines
     """
     with open(filename, encoding="utf-8") as myFile:
+        nb_lines = 1
         while True:
-            nb_lines = 1
             line = myFile.readline()
             if not line:
                 break
