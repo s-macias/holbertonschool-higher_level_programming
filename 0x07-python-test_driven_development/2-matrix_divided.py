@@ -24,20 +24,21 @@ def matrix_divided(matrix, div):
     Returns:
         new_matrix
     """
+    
     if isinstance(div, (int, float)) is False:
         raise TypeError("div must be a number")
     elif div == 0:
         raise ZeroDivisionError("division by zero")
     for i in matrix:
         if type(i) is not list:
-            raise TypeError("matrix must be a matrix (list of lists) of\
- integers/floats")
+            raise TypeError("matrix must be a matrix (list of lists) of" +
+                            " integers/floats")
         elif len(matrix[0]) != len(i) or len(matrix[0] == 0):
             raise TypeError("Each row of the matrix must have the same size")
         for j in i:
             if isinstance(j, (int, float)) is False:
-                raise TypeError("matrix must be a matrix (list of lists) of\
- integers/floats")
+                raise TypeError("matrix must be a matrix (list of lists) of" +
+                                " integers/floats")
     new_matrix = []
     new_matrix = [[round((j/div), 2) for j in i] for i in matrix]
     return new_matrix
