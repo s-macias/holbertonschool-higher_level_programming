@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """function that divides all elements of a matrix.
 """
 
@@ -19,6 +18,8 @@ def matrix_divided(matrix, div):
         Message div must be a number
         ZeroDivisionError exception
         Message division by zero
+        TypeError
+        Message matrix must be a matrix (array of arrays of integers/floats)
 
     Returns:
         new_matrix
@@ -31,7 +32,7 @@ def matrix_divided(matrix, div):
         if type(i) is not list:
             raise TypeError("matrix must be a matrix (list of lists) of\
  integers/floats")
-        elif len(matrix[0]) != len(i):
+        elif len(matrix[0]) != len(i) or len(matrix[0] == 0):
             raise TypeError("Each row of the matrix must have the same size")
         for j in i:
             if isinstance(j, (int, float)) is False:
