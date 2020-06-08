@@ -40,3 +40,86 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
+
+    @property
+    def width(self):
+        """ method for width value
+        Return:
+            width value: integer greater than 0
+        """
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """ setter method for width
+        Attribute:
+            width value: must be an integer greater than zero
+        """
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+        elif value <= 0:
+            raise ValueError("width must be > 0")
+        self.__width = value
+
+    @property
+    def height(self):
+        """ method for height value
+        Return:
+            height value: integer greater than 0
+        """
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """ setter method for height
+
+        Attribute:
+            height value: must be an integer greater than zero
+        """
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        elif value <= 0:
+            raise ValueError("height must be > 0")
+        self.__height = value
+
+    @property
+    def x(self):
+        """ method for x value
+        Return:
+            x value: integer >= 0
+        """
+        return self.__x
+
+    @x.setter
+    def x(self, value):
+        """ setter method for x
+
+        Attribute:
+            x value: must be an integer >= 0
+        """
+        if type(value) is not int:
+            raise TypeError("x must be an integer")
+        elif value < 0:
+            raise ValueError("x must be >= 0")
+        self.__x = value
+
+    @property
+    def y(self):
+        """ method for y value
+        Return:
+            y value: integer >= 0
+        """
+        return self.__y
+
+    @y.setter
+    def y(self, value):
+        """ setter method for y
+
+        Attribute:
+            y value: must be an integer >= 0
+        """
+        if type(value) is not int:
+            raise TypeError("y must be an integer")
+        elif value < 0:
+            raise ValueError("y must be >= 0")
+        self.__y = value
