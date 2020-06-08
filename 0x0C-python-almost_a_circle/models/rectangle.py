@@ -130,3 +130,11 @@ class Rectangle(Base):
             area: integer
         """
         return self.width * self.height
+
+    def display(self):
+        """public method that prints in stdout the Rectangle instance
+        with the character #
+        """
+        rect_display = ("\n" * self.y)
+        + ((" " * self.x) + ("#" * self.width + "\n") * self.height)
+        print(rect_display)
