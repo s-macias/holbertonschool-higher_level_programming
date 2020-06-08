@@ -138,3 +138,11 @@ class Rectangle(Base):
         rect_display = ("\n" * self.y)
         + ((" " * self.x) + ("#" * self.width + "\n") * self.height)
         print(rect_display)
+
+    def __str__(self):
+        """method to override the __str__ method
+        Returns:
+            string: [Rectangle] (<id>) <x>/<y> - <width>/<height>
+        """
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y,
+                                                       self.width, self.height)
