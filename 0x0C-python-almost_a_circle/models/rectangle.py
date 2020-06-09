@@ -35,11 +35,11 @@ class Rectangle(Base):
             y: Private instance attribute (integer, 0 by default
             id: Private instance attribute (integer) inherited from Base
         """
-        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
+        super().__init__(id)
 
     @property
     def width(self):
@@ -144,12 +144,11 @@ class Rectangle(Base):
         Returns:
             string: [Rectangle] (<id>) <x>/<y> - <width>/<height>
         """
-        id = self.id
         x = self.x
         y = self.y
         w = self.width
         h = self.height
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(id, x, y, w, h)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, x, y, w, h)
 
     def update(self, *args, **kwargs):
         """public method that assigns an argument to each attribute
@@ -162,7 +161,7 @@ class Rectangle(Base):
         """
         if not args or args is None:
             for key, value in kwargs.items():
-                setattr(self, key, value)
+                setattr(self, key, value1)
         attribute_list = ['id', 'width', 'height', 'x', 'y']
         for arg, value in enumerate(args):
             setattr(self, attribute_list[arg], value)
