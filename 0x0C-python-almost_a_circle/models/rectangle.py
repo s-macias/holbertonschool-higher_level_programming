@@ -150,3 +150,16 @@ class Rectangle(Base):
         w = self.width
         h = self.height
         return "[Rectangle] ({}) {}/{} - {}/{}".format(id, x, y, w, h)
+
+    def update(self, *args):
+        """public method that assigns an argument to each attribute
+        Attributes:
+            1st argument should be the id attribute
+            2nd argument should be the width attribute
+            3rd argument should be the height attribute
+            4th argument should be the x attribute
+            5th argument should be the y attribute
+        """
+        attribute_list = ['id', 'width', 'height', 'x', 'y']
+        for arg, value in enumerate(args):
+            setattr(self, attribute_list[arg], value)
