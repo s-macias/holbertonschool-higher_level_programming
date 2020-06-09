@@ -135,14 +135,18 @@ class Rectangle(Base):
         """public method that prints in stdout the Rectangle instance
         with the character #
         """
-        rect_display = ("\n" * self.y)
-        + ((" " * self.x) + ("#" * self.width + "\n") * self.height)
-        print(rect_display)
+        print_y_position = ("\n" * self.y)
+        print(print_y_position)
+        print((" " * self.x + "#" * self.width + "\n") * self.height)
 
     def __str__(self):
         """method to override the __str__ method
         Returns:
             string: [Rectangle] (<id>) <x>/<y> - <width>/<height>
         """
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y,
-                                                       self.width, self.height)
+        id = self.id
+        x = self.x
+        y = self.y
+        w = self.width
+        h = self.height
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(id, x, y, w, h)
