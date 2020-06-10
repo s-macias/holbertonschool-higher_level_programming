@@ -165,3 +165,14 @@ class Rectangle(Base):
         attribute_list = ['id', 'width', 'height', 'x', 'y']
         for arg, value in enumerate(args):
             setattr(self, attribute_list[arg], value)
+
+    def to_dictionary(self):
+        """public method that returns the dictionary representation
+        of a rectangle
+        """
+        i = self.id
+        w = self.width
+        h = self.height
+        x = self.x
+        y = self.y
+        return({"id": i, "width": w, "height": h, "x": x, "y": y})
