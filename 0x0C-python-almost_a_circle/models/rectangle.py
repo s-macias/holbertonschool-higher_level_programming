@@ -135,7 +135,7 @@ class Rectangle(Base):
         """public method that prints in stdout the Rectangle instance
         with the character #
         """
-        print("\n" * self.y)
+        print("\n" * self.y, end="")
         for row in range(self.height):
             print(" " * self.x + ("#" * self.width))
 
