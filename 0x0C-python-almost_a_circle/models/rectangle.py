@@ -135,9 +135,9 @@ class Rectangle(Base):
         """public method that prints in stdout the Rectangle instance
         with the character #
         """
-        print_y_position = ("\n" * self.y)
-        print(print_y_position)
-        print((" " * self.x + "#" * self.width + "\n") * self.height)
+        print("\n" * self.y)
+        for row in range(self.height):
+            print(" " * self.x + ("#" * self.width))
 
     def __str__(self):
         """method to override the __str__ method
