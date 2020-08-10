@@ -15,7 +15,6 @@ if __name__ == "__main__":
 
     cur.execute(
         "SELECT * FROM states WHERE name = %s ORDER BY id", (search, ))
-    print(cur)
     rows = cur.fetchall()
     for row in rows:
         print(row)
