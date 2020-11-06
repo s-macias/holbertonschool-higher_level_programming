@@ -1,5 +1,5 @@
 ### Readme
-General
+General learning objectives
 
 * Why Javascript programming is amazing (don’t forget to tweet today, with the hashtag #javascriptisamazing :))
 * How to create an object in Javascript
